@@ -4,8 +4,6 @@ name: unit-tests
 on:
   pull_request:
     branches: [ "main" ]
-    paths:
-      - "**.dart"
 
 jobs:
   check-code-and-unit-tests:
