@@ -18,5 +18,8 @@ jobs:
         channel: 'stable'
     - run: flutter --version
 
+    - name: pub get 
+      run: flutter pub get 
+
     - name: Linter
       run: flutter analyze lib test   
