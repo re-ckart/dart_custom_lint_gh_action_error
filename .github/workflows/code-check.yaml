@@ -3,7 +3,6 @@
 name: unit-tests
 on:
   push:
-    branches: [ "main" ]
     paths:
       - "**.dart"
 
