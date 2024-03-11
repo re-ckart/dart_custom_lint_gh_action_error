@@ -2,9 +2,8 @@
 
 name: unit-tests
 on:
-  push:
-    paths:
-      - "**.dart"
+  pull_request:
+    branches: [ "main" ]
 
 jobs:
   check-code-and-unit-tests:
@@ -19,5 +18,9 @@ jobs:
         channel: 'stable'
     - run: flutter --version
 
+    - name: pub get 
+      run: flutter pub get 
+
     - name: Linter
       run: flutter analyze lib test   
+
