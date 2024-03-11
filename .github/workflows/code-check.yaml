@@ -23,3 +23,7 @@ jobs:
 
     - name: Linter
       run: flutter analyze lib test   
+
+    - name: Linter workaround, running second time if failed
+      if: failure()
+      run: flutter analyze lib test
